@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    min-height: 1fr;
+    display: grid;
+    grid-template:
+        'top top'
+        'header main'
+        'footer main'
+        /240px;
+    overflow-x: hidden;
+}
+
+#top-menu {
+    width: 100vw;
+    height: 40px;
+    background-color: rgb(236, 226, 186);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: top;
+}
+
+#top-menu p {
+    font-size: 15px;
+    position: relative;
+    font-family: serif;
+    letter-spacing: 2px;
+}
+
+#top-menu span {
+    position: absolute;
+    top: 0;
+    right: -40px;
+}
+
+header {
+    grid-area: header;
+    background-color: black;
+    width: 240px;
+    border-right: solid 2px red;
+    position: sticky
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+#logo {
+    width: 210px;
+    height: 190px;
+    object-fit: cover;
+}
+
+header li {
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+header dl {
+    font-family: serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+header dt {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+header dd {
+    color: white;
+    margin-bottom: 13px;
+}
+
+main {
+    width: auto;
+    margin-left: 0;
+}
+
+#content-info {
+    background-color: black;
+}
+
+h2 {
+    padding: 15px 0 15px 20px;
+    font-size: 13px;
+    border-bottom: solid 2px red;
+    font-family: serif;
+    font-weight: lighter;
+    color: white;
+}
+
+#upper-contents {
+    display: flex;
+    justify-content: space-around;
+}
+
+#upper-contents img {
+    width: 100%;
+    max-width: 580px;
+    margin: 12px 0;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    font-family: serif;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    margin: 0px;
+}
+
+h3 span {
+    font-size: 40px;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    font-family: serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+h4:nth-of-type(2) {
+    color: red;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.caption {
+    padding: 15px;
+}
+
+#middle-contents {
+    display: flex;
+    justify-content: space-around;
+    border-top: solid 2px red;
+}
+
+#sub-katanakaji {
+    position: relative;
+    padding: 10px;
+}
+
+h5 {
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+    font-family: serif;
+    letter-spacing: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 37%;
+    left: 41%;
+}
+
+#orchestra {
+    display: flex;
+    width: 580px;
+    padding: 10px;
+}
+
+#orchestra img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 200px;
+    height: 200px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+small {
+    font-size: 11px;
+    color: gray;
+    font-family: sans-serif;
+}
