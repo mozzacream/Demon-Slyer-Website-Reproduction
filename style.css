@@ -13,8 +13,9 @@ body {
         'top top'
         'header main'
         'footer main'
-        /240px;
+        /240px auto;
     overflow-x: hidden;
+    background-color: black;
 }
 
 #top-menu {
@@ -45,7 +46,6 @@ header {
     grid-area: header;
     background-color: black;
     width: 240px;
-    border-right: solid 2px red;
     position: sticky
 }
 
@@ -88,14 +88,20 @@ main {
     margin-left: 0;
 }
 
-#content-info {
+#top-news {
     background-color: black;
+    border-left: solid 1px red;
+}
+
+#content-info {
+    background-image: url(img.07.jpeg);
+    background-repeat: repeat;
 }
 
 h2 {
     padding: 15px 0 15px 20px;
     font-size: 13px;
-    border-bottom: solid 2px red;
+    border-bottom: solid 1px red;
     font-family: serif;
     font-weight: lighter;
     color: white;
@@ -104,12 +110,31 @@ h2 {
 #upper-contents {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
-#upper-contents img {
-    width: 100%;
-    max-width: 580px;
-    margin: 12px 0;
+.pic-box {
+    overflow: hidden;
+    margin: 20px;
+}
+
+.pic-box img {
+    transition: transform 0.2s;
+}
+
+.pic-box:hover img {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+
+#katanakaji,
+#yuukaku,
+#sub-katanakaji,
+#orchestra {
+    width: calc(100% / 2);
+    text-align: center;
+    border-left: solid 1px red;
 }
 
 h3 {
@@ -155,6 +180,8 @@ h4 {
 #yuukaku h4:nth-of-type(2) {
     font-size: 20px;
     letter-spacing: 1px;
+    position: relative;
+    top: -20px;
 }
 
 #yuukaku .white-back {
@@ -164,20 +191,29 @@ h4 {
     padding: 2px 3px;
 }
 
+#yuukaku .caption h3:last-of-type {
+    color: red;
+    position: relative;
+    top: -20px;
+    padding-bottom: -20px;
+}
+
 .caption {
     padding: 15px;
+    background-color: rgba(0, 0, 0, 0.462);
+    margin: 0 20px 20px;
 }
 
 #middle-contents {
     display: flex;
     justify-content: space-around;
-    border-top: solid 2px red;
+    border-top: solid 1px red;
     height: 222px;
 }
 
 #sub-katanakaji {
     position: relative;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 h5 {
@@ -212,27 +248,26 @@ h5 {
 }
 
 .up {
-    top: 76px;
-    left: 240px;
+    top: 74px;
+    left: 250px;
 }
 
 .bottom {
-    top: 131px;
-    left: 240px;
+    top: 129px;
+    left: 250px;
 }
 
 
 #orchestra {
     display: flex;
-    width: 580px;
-    padding: 10px 0;
+    padding: 20px;
 }
 
 #orchestra img {
     object-fit: cover;
     object-position: 50% 50%;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
 }
 
 #orchestra div {
@@ -254,6 +289,10 @@ h5 {
     color: rgb(226, 218, 193);
 }
 
+#orchestra div {
+    background-color: rgba(0, 0, 0, 0.515);
+}
+
 .orch-info {
     font-size: 15px !important;
     letter-spacing: 2px;
@@ -268,19 +307,33 @@ h5 {
     font-size: 20px;
 }
 
-#jougen-shuketsu div {
-    border-top: solid 2px red;
-    padding: 10px;
+#jougen-shuketsu {
+    border-left: solid 1px red;
+    border-top: solid 1px red;
+    padding-bottom: 20px;
+}
+
+.pic-box-last {
+    overflow: hidden;
+    margin: 20px;
+}
+
+.pic-box-last img {
+    transition: transform 0.2s;
+}
+
+.pic-box-last:hover img {
+    transform: scale(1.05);
+    transition: transform 0.2s;
 }
 
 #jougen-shuketsu img {
-    width: 1200px;
+    width: 1160px;
 }
 
 footer {
     grid-area: footer;
 }
-
 
 small {
     font-size: 11px;
