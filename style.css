@@ -40,6 +40,54 @@ body {
     position: absolute;
     top: 0;
     right: -40px;
+    cursor: pointer;
+}
+
+#menu-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.346);
+    z-index: 5;
+}
+
+#drop-menu {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    background-color: rgb(251, 245, 230);
+    z-index: 10;
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+}
+
+#drop-menu tr {
+    height: 100%;
+}
+
+#drop-menu td {
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+    width: 250px;
+    text-align: center;
+    font-family: serif;
+    border-collapse: collapse;
+    margin: 0;
+    border-left: solid 1px black;
+    border-bottom: solid 1px black;
 }
 
 header {
@@ -73,7 +121,6 @@ header ul {
 }
 
 header li {
-    /* margin-bottom: 30px; */
     padding: 20px 20px 10px;
     border-bottom: solid 1px red;
 }
@@ -174,7 +221,7 @@ h2 {
 }
 
 .pic-box:hover img {
-    transform: scale(1.04);
+    transform: scale(1.06);
     transition: transform 0.2s;
 }
 
@@ -374,7 +421,7 @@ h5 {
 }
 
 .pic-box-last:hover img {
-    transform: scale(1.04);
+    transform: scale(1.06);
     transition: transform 0.2s;
 }
 
