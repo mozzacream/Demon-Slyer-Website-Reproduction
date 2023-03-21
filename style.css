@@ -343,6 +343,7 @@ h4 {
     border: solid 0.5px white;
     display: flex;
     justify-content: space-between;
+    white-space: nowrap;
 }
 
 .deco span {
