@@ -215,6 +215,37 @@ main {
 #top-news {
     background-color: black;
     border-left: solid 1px red;
+    border-bottom: solid 1px red;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#top-news h2 {
+    position: relative;
+    height: 55px;
+    color: red;
+    margin-right: 13px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+#news-box {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    overflow: hidden;
+}
+
+.news-rotate {
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    z-index: 10;
+    position: relative;
+    transition: all 0.5s;
 }
 
 #content-info {
@@ -225,7 +256,6 @@ main {
 h2 {
     padding: 15px 0 15px 20px;
     font-size: 13px;
-    border-bottom: solid 1px red;
     font-family: serif;
     font-weight: lighter;
     color: white;

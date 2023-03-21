@@ -18,4 +18,34 @@ playCover.addEventListener('mouseover', () => {
 subBlock.addEventListener('mouseleave', () => {
     playCover.classList.remove('visible');
 })
-dropMenuMark.get
+
+const newsBox = document.getElementById('news-box');
+const newsRotate = document.getElementsByClassName('news-rotate');
+
+let count = 0;
+function rotate17deg() {
+    for (let i = 0; i < newsRotate.length; i++) {
+        newsRotate[i].style.top = "-17px"
+    }
+}
+function rotate34deg() {
+    for (let i = 0; i < newsRotate.length; i++) {
+        newsRotate[i].style.top = "-34px"
+    }
+}
+function rotate0deg() {
+    for (let i = 0; i < newsRotate.length; i++) {
+        newsRotate[i].style.top = "0px"
+    }
+}
+setInterval(() => {
+    count++;
+    if (count === 3) {
+        rotate17deg();
+    } else if (count == 6) {
+        rotate34deg();
+    } else if (count === 9) {
+        rotate0deg();
+        count = 0;
+    }
+}, 1000);
