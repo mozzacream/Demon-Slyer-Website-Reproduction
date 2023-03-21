@@ -31,7 +31,7 @@ setInterval(() => {
 setTimeout(() => {
     loadingDisp.classList.add('load-done');
     mainVisible();
-}, 2000);
+}, 3500);
 
 dropMenuMark.addEventListener('click', () => {
     dropMenu.classList.toggle('menu-open');
