@@ -7,12 +7,30 @@ const subBlock = document.getElementById('sub-katanakaji');
 const loadingDisp = document.getElementById('loading');
 const imgKocho = document.getElementsByClassName('kocho')[0];
 
+const topMenu = document.getElementById('top-menu');
+const header = document.getElementsByTagName("header")[0];
+const main = document.getElementsByTagName("main")[0];
+
+function mainHidden() {
+    topMenu.style.visibility = 'hidden'
+    header.style.visibility = 'hidden'
+    main.style.visibility = 'hidden'
+}
+mainHidden();
+
+function mainVisible() {
+    topMenu.style.visibility = 'visible'
+    header.style.visibility = 'visible'
+    main.style.visibility = 'visible'
+}
+
 setInterval(() => {
     imgKocho.classList.add('opacity-rem');
 }, 1000);
 
 setTimeout(() => {
     loadingDisp.classList.add('load-done');
+    mainVisible();
 }, 2000);
 
 dropMenuMark.addEventListener('click', () => {
