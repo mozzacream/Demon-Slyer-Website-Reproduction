@@ -16,6 +16,58 @@ body {
         /240px auto;
     overflow-x: hidden;
     background-color: black;
+    position: relative;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: "";
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url(img.07.jpeg);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(117, 0, 201, 0.245);
+    z-index: -1;
+}
+
+#loading .img-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.kocho {
+    position: absolute;
+    width: 400px;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.opacity-rem {
+    opacity: 0.6;
+    transition: all 1s 0.4s;
+}
+
+.load-done {
+    z-index: -10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
 }
 
 #top-menu {

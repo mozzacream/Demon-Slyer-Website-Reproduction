@@ -4,6 +4,16 @@ const dropMenu = document.getElementById('drop-menu');
 const menuBack = document.getElementById('menu-back');
 const subBlock = document.getElementById('sub-katanakaji');
 
+const loadingDisp = document.getElementById('loading');
+const imgKocho = document.getElementsByClassName('kocho')[0];
+
+setInterval(() => {
+    imgKocho.classList.add('opacity-rem');
+}, 1000);
+
+setTimeout(() => {
+    loadingDisp.classList.add('load-done');
+}, 2000);
 
 dropMenuMark.addEventListener('click', () => {
     dropMenu.classList.toggle('menu-open');
