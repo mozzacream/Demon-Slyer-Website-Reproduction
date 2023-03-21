@@ -30,7 +30,7 @@ function rotate17deg() {
 }
 function rotate34deg() {
     for (let i = 0; i < newsRotate.length; i++) {
-        newsRotate[i].style.top = "-34px"
+        newsRotate[i].style.top = "-35px"
     }
 }
 function rotate0deg() {
