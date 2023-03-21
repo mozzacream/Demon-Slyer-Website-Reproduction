@@ -238,6 +238,7 @@ main {
     flex-direction: column;
     height: 20px;
     overflow: hidden;
+    flex: 1;
 }
 
 .news-rotate {
@@ -247,6 +248,22 @@ main {
     z-index: 4;
     position: relative;
     transition: all 0.5s;
+}
+
+.news-rotate::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: rgb(119, 71, 0);
+    z-index: -1;
+}
+
+.news-rotate:hover::before {
+    width: 100%;
+    transition: all 0.2s;
 }
 
 #content-info {
