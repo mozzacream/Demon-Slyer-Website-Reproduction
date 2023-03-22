@@ -6,6 +6,7 @@ const subBlock = document.getElementById('sub-katanakaji');
 
 const loadingDisp = document.getElementById('loading');
 const imgKocho = document.getElementsByClassName('kocho')[0];
+const kimetsuLogo = document.getElementById('kimetsu-logo');
 
 const topMenu = document.getElementById('top-menu');
 const header = document.getElementsByTagName("header")[0];
@@ -23,6 +24,9 @@ function mainVisible() {
     header.style.visibility = 'visible'
     main.style.visibility = 'visible'
 }
+setInterval(() => {
+    kimetsuLogo.classList.add('logo-loading');
+}, 100);
 
 setInterval(() => {
     imgKocho.classList.add('opacity-rem');
